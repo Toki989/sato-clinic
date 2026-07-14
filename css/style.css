@@ -333,12 +333,24 @@ img {
   font-size: 13px;
   letter-spacing: 0.18em;
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.today-card a:hover,
+.today-card a:focus-visible {
+  background: #246e47;
+  color: #f3fff7;
 }
 
 .today-card a span {
+  display: flex;
+  align-items: center;
   position: absolute;
   right: 18px;
   font-size: 28px;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(calc(-50% - 4px));
 }
 
 /* Departments */
