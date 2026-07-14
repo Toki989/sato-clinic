@@ -234,6 +234,17 @@ img {
   text-align: center;
 }
 
+.news-card h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.news-card h2 a:hover,
+.news-card h2 a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .news-card ul {
   margin: 0;
   padding: 0;
