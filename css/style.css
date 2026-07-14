@@ -389,14 +389,23 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   height: 304px;
+  background: var(--color-white);
   border: 3px solid var(--color-green-deep);
   border-radius: var(--radius-large);
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .departments article img {
-  width: 180px;
-  height: 160px;
+  width: 236px;
+  height: 208px;
   object-fit: contain;
+  transition: filter 0.25s ease;
+}
+
+.departments .department-icon-lifestyle {
+  width: 264px;
+  height: 228px;
 }
 
 .departments article h3 {
@@ -404,16 +413,42 @@ a:focus-visible {
   color: var(--color-green-deep);
   font-size: 37px;
   font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.departments article:hover,
+.departments article:focus-within {
+  background: var(--color-green-deep);
+  border-color: var(--color-green-deep);
+  box-shadow: 0 12px 24px rgba(11, 119, 61, 0.18);
+}
+
+.departments article:hover img,
+.departments article:focus-within img {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(27%) saturate(390%) hue-rotate(64deg) brightness(103%) contrast(98%);
+}
+
+.departments article:hover h3,
+.departments article:focus-within h3 {
+  color: #f3fff7;
 }
 
 .more-link {
   grid-column: 2;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
   margin-top: -20px;
   margin-right: -5px;
   color: var(--color-text);
   font-size: 28px;
-  text-align: right;
   text-decoration: none;
+}
+
+.more-link-text:hover,
+.more-link:focus-visible .more-link-text {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
 }
 
 .more-link span {
