@@ -16,29 +16,29 @@
       <nav class="utility-nav" aria-label="クイックメニュー">
         <a href="tel:0000000000" aria-label="TEL">
           <span class="utility-icon">
-            <img class="icon-default" src="./assets/icons/tel.png" alt="">
-            <img class="icon-hover" src="./assets/satoclinic-asset/tel-hover.png" alt="">
+            <img class="icon-default" src="./assets/icons/tel.png" alt="" aria-hidden="true">
+            <img class="icon-hover" src="./assets/satoclinic-asset/tel-hover.png" alt="" aria-hidden="true">
           </span>
         </a>
         <a href="#access" aria-label="アクセス">
           <span class="utility-icon">
-            <img class="icon-default" src="./assets/icons/access.png" alt="">
-            <img class="icon-hover" src="./assets/satoclinic-asset/access-hover.png" alt="">
+            <img class="icon-default" src="./assets/icons/access.png" alt="" aria-hidden="true">
+            <img class="icon-hover" src="./assets/satoclinic-asset/access-hover.png" alt="" aria-hidden="true">
           </span>
         </a>
-        <a href="#" aria-label="検索">
+        <a href="#site-search" aria-label="院内検索">
           <span class="utility-icon">
-            <img class="icon-default" src="./assets/icons/search.png" alt="">
-            <img class="icon-hover" src="./assets/satoclinic-asset/search-hover.png" alt="">
+            <img class="icon-default" src="./assets/icons/search.png" alt="" aria-hidden="true">
+            <img class="icon-hover" src="./assets/satoclinic-asset/search-hover.png" alt="" aria-hidden="true">
           </span>
         </a>
-        <a href="#" class="menu-button" aria-label="メニュー"><i></i><span>メニュー</span></a>
+        <a href="#site-map" class="menu-button" aria-label="サイトマップへ移動"><i aria-hidden="true"></i><span>メニュー</span></a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section id="home" class="hero">
       <img src="./assets/Hospital_Exterior/hospital_1.jpg" alt="佐藤医院の外観">
       <h1>地域に根差した医療</h1>
       <div class="hero-fade"></div>
@@ -46,30 +46,31 @@
 
     <section class="summary-cards container">
       <article class="news-card">
-        <h2><a href="#">病院からのお知らせ</a></h2>
+        <h2 id="news">病院からのお知らせ</h2>
         <ul>
-          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#">インフルエンザ予防接種について</a></li>
-          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-gray">休診情報</span><a href="#">年末年始の休診について</a></li>
-          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-green">ご案内</span><a href="#">健康診断のご案内</a></li>
-          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#">新型コロナウイルス対策について</a></li>
-          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-green">ご案内</span><a href="#">オンライン診療の導入について</a></li>
+          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#contact">インフルエンザ予防接種について</a></li>
+          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-gray">休診情報</span><a href="#hours">年末年始の休診について</a></li>
+          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-green">ご案内</span><a href="#access">健康診断のご案内</a></li>
+          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#news">新型コロナウイルス対策について</a></li>
+          <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-green">ご案内</span><a href="#contact">オンライン診療の導入について</a></li>
         </ul>
       </article>
 
       <article class="today-card">
-        <h2><img src="./assets/icons/clock.png" alt="">本日の診療時間</h2>
+        <h2><img src="./assets/icons/clock.png" alt="" aria-hidden="true">本日の診療時間</h2>
         <strong>9:00〜12:00 / 13:30〜18:00</strong>
         <p>受付時間 8:00〜11:00 / 12:00〜17:00</p>
         <a href="#hours">休診日: 木曜日・土曜午後・日曜日<span>›</span></a>
       </article>
     </section>
 
-    <section class="departments container">
-      <article><img src="./assets/icons/general.png" alt=""><h2>一般内科</h2></article>
-      <article><img src="./assets/icons/lifestyle.png" alt=""><h2>生活習慣病</h2></article>
-      <article><img src="./assets/icons/stomach.png" alt=""><h2>消化器内科</h2></article>
-      <article><img src="./assets/icons/lungs.png" alt=""><h2>呼吸器内科</h2></article>
-      <a class="more-link" href="#">その他<span>›</span></a>
+    <section id="services" class="departments container" aria-labelledby="services-heading">
+      <h2 id="services-heading" class="section-label">診療内容</h2>
+      <article><img src="./assets/icons/general.png" alt="" aria-hidden="true"><h3>一般内科</h3></article>
+      <article><img src="./assets/icons/lifestyle.png" alt="" aria-hidden="true"><h3>生活習慣病</h3></article>
+      <article><img src="./assets/icons/stomach.png" alt="" aria-hidden="true"><h3>消化器内科</h3></article>
+      <article><img src="./assets/icons/lungs.png" alt="" aria-hidden="true"><h3>呼吸器内科</h3></article>
+      <a class="more-link" href="#staff">その他<span>›</span></a>
     </section>
 
     <section class="photo-row" aria-label="医院イメージ">
@@ -80,23 +81,24 @@
 
     <section id="hours" class="hours-section container small-container">
       <h2>診療時間</h2>
-      <table>
+      <table aria-describedby="hours-note">
+        <caption class="visually-hidden">佐藤医院の診療時間一覧</caption>
         <thead>
-          <tr><th></th><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+          <tr><th scope="col"></th><th scope="col"></th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr>
         </thead>
         <tbody>
-          <tr><th>午前</th><td>9:00〜12:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>●</td><td>―</td></tr>
-          <tr><th>午後</th><td>13:30〜18:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>―</td><td>―</td></tr>
+          <tr><th scope="row">午前</th><td>9:00〜12:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>●</td><td>―</td></tr>
+          <tr><th scope="row">午後</th><td>13:30〜18:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>―</td><td>―</td></tr>
         </tbody>
       </table>
-      <p>受付時間: 午前 8:00〜11:00 / 午後 12:00〜17:00<br>休診日: 木曜日・土曜午後・日曜日<br>※祝祭日も診療を行っておりますが、休診日もございますため事前にご確認ください。</p>
+      <p id="hours-note">受付時間: 午前 8:00〜11:00 / 午後 12:00〜17:00<br>休診日: 木曜日・土曜午後・日曜日<br>※祝祭日も診療を行っておりますが、休診日もございますため事前にご確認ください。</p>
     </section>
 
     <section class="feature-image">
       <img src="./assets/Infomation_Image/information_3.jpg" alt="看護師と患者">
     </section>
 
-    <section class="about-section container">
+    <section id="about" class="about-section container">
       <div class="about-copy">
         <h2>当院について</h2>
         <p>佐藤医院は、地域の皆様の健康を守り、より良い生活をサポートすることを使命としています。</p>
@@ -106,7 +108,7 @@
       <img src="./assets/Hospital_Exterior/hospital_6.jpg" alt="佐藤医院の院内">
     </section>
 
-    <section class="greeting-section">
+    <section id="greeting" class="greeting-section">
       <div class="container greeting-inner">
         <img src="./assets/Doctor_Image/sato_taro.jpg" alt="佐藤医院 院長 佐藤太郎">
         <div>
@@ -120,7 +122,7 @@
       </div>
     </section>
 
-    <section class="staff-section container">
+    <section id="staff" class="staff-section container">
       <h2>スタッフ紹介</h2>
       <p class="staff-intro">地域の皆様に安心してご来院いただけるよう、スタッフ一同、誠心誠意対応いたします。それぞれの専門性と温かさを活かし、皆様の健康を支えるパートナーとしてお力になれるよう努めてまいります。</p>
 
@@ -189,43 +191,49 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <section class="clinic-info">
+      <section id="contact" class="clinic-info">
         <p>医療法人 ○○会</p>
         <h2>佐藤医院</h2>
         <p>〒123-4567<br>東京都台東区上野0-0-0<br><span>電話番号: 00-0000-0000</span><br><span>FAX: 00-0000-0000</span><br>メール: info@sato-clinic-test.jp</p>
       </section>
 
       <section class="footer-access">
-        <h3><img src="./assets/icons/access.png" alt="">アクセス</h3>
+        <h3><img src="./assets/icons/access.png" alt="" aria-hidden="true">アクセス</h3>
         <p>JR線「上野駅」より徒歩5分<br>駐車場あり「10台」</p>
         <a href="#access">アクセスページ<span>›</span></a>
       </section>
 
       <section class="footer-hours">
-        <h3><img src="./assets/icons/clock.png" alt="">診察時間</h3>
+        <h3><img src="./assets/icons/clock.png" alt="" aria-hidden="true">診察時間</h3>
         <table>
-          <tr><th></th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>
-          <tr><td>9:00〜12:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>●</td></tr>
-          <tr><td>13:30〜18:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>―</td></tr>
+          <caption class="visually-hidden">フッターの診療時間一覧</caption>
+          <thead>
+            <tr><th scope="col"></th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">9:00〜12:00</th><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>●</td></tr>
+            <tr><th scope="row">13:30〜18:00</th><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>―</td></tr>
+          </tbody>
         </table>
         <p class="holiday">休診日<br><small>木曜・土曜午後・日曜</small></p>
       </section>
 
-      <section class="sitemap">
-        <h3><img src="./assets/icons/sitemap.png" alt="">サイトマップ</h3>
+      <section id="site-map" class="sitemap">
+        <h3><img src="./assets/icons/sitemap.png" alt="" aria-hidden="true">サイトマップ</h3>
         <div>
-          <a href="#">お知らせ</a>
-          <a href="#">当院について</a>
-          <a href="#">診療内容</a>
-          <a href="#">医院長挨拶</a>
+          <a href="#news">お知らせ</a>
+          <a href="#about">当院について</a>
+          <a href="#services">診療内容</a>
+          <a href="#greeting">医院長挨拶</a>
           <a href="#hours">診療時間</a>
           <a href="#access">アクセス</a>
-          <a href="#">ホーム</a>
-          <a href="#">医師紹介</a>
+          <a href="#home">ホーム</a>
+          <a href="#staff">医師紹介</a>
         </div>
       </section>
     </div>
     <p class="copyright">© 2026 Satou Clinic</p>
   </footer>
+  <div id="site-search" hidden></div>
 </body>
 </html>
