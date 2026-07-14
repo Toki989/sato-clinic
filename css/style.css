@@ -107,10 +107,37 @@ img {
   transform: translateY(7px);
 }
 
+.utility-icon {
+  position: relative;
+  display: block;
+  width: 52px;
+  height: 55px;
+}
+
 .utility-nav img {
   width: 52px;
   height: 55px;
   object-fit: contain;
+}
+
+.utility-icon img {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.2s ease;
+}
+
+.utility-icon .icon-hover {
+  opacity: 0;
+}
+
+.utility-nav a:hover .utility-icon .icon-default,
+.utility-nav a:focus-visible .utility-icon .icon-default {
+  opacity: 0;
+}
+
+.utility-nav a:hover .utility-icon .icon-hover,
+.utility-nav a:focus-visible .utility-icon .icon-hover {
+  opacity: 1;
 }
 
 .menu-button i,
