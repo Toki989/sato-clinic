@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --color-green: #0f9149;
   --color-green-deep: #0b773d;
   --color-green-soft: #d8efdf;
@@ -249,6 +249,8 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .news-card li {
@@ -259,6 +261,7 @@ img {
   margin: 9px 0;
   font-size: 15px;
   line-height: 1.2;
+  text-align: left;
 }
 
 .news-card a {
