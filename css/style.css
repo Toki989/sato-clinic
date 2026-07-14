@@ -98,10 +98,18 @@ img {
   font-size: 12px;
 }
 
+.utility-nav a:not(.menu-button),
+.menu-button {
+  gap: 18px;
+}
+
+.menu-button {
+  transform: translateY(7px);
+}
+
 .utility-nav img {
-  width: 42px;
-  height: 42px;
-  margin-bottom: 1px;
+  width: 52px;
+  height: 55px;
   object-fit: contain;
 }
 
@@ -131,7 +139,6 @@ img {
 }
 
 .menu-button span {
-  margin-top: 18px;
   color: var(--color-text);
 }
 
