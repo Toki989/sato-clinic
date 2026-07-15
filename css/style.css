@@ -105,16 +105,14 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 28px;
-  height: 100%;
 }
 
 .utility-nav a {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 100%;
+  flex: 0 0 auto;
   color: var(--color-green-deep);
   text-decoration: none;
   font-size: 12px;
@@ -125,7 +123,12 @@ a:focus-visible {
   gap: 18px;
 }
 
+.utility-nav a:not(.menu-button) {
+  width: 52px;
+}
+
 .menu-button {
+  width: 56px;
   transform: translateY(7px);
 }
 
