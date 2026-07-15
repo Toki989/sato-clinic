@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>佐藤医院</title>
+  <meta name="description" content="佐藤医院の公式サイトです。診療時間、診療内容、スタッフ紹介、アクセス情報をご案内しています。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
   <header class="site-header">
     <div class="header-inner">
-      <img class="site-logo" src="./assets/Logo/logo.png" alt="佐藤医院 Sato Clinic">
+      <a class="site-logo-link" href="#home" aria-label="佐藤医院トップへ">
+        <img class="site-logo" src="./assets/Logo/logo.png" alt="佐藤医院 Sato Clinic">
+      </a>
       <nav class="utility-nav" aria-label="クイックメニュー">
         <a href="tel:0000000000" aria-label="TEL">
           <span class="utility-icon">
@@ -26,7 +30,7 @@
             <img class="icon-hover" src="./assets/satoclinic-asset/access-hover.png" alt="" aria-hidden="true">
           </span>
         </a>
-        <a href="#site-search" aria-label="院内検索">
+        <a href="#news" aria-label="お知らせ">
           <span class="utility-icon">
             <img class="icon-default" src="./assets/icons/search.png" alt="" aria-hidden="true">
             <img class="icon-hover" src="./assets/satoclinic-asset/search-hover.png" alt="" aria-hidden="true">
@@ -37,7 +41,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section id="home" class="hero">
       <img src="./assets/Hospital_Exterior/hospital_1.jpg" alt="佐藤医院の外観">
       <h1>地域に根差した医療</h1>
@@ -74,9 +78,9 @@
     </section>
 
     <section class="photo-row" aria-label="医院イメージ">
-      <img src="./assets/Infomation_Image/information_2.jpg" alt="受付スタッフ">
-      <img src="./assets/Hospital_Exterior/hospital_3.jpg" alt="院内風景">
-      <img src="./assets/Medical_Image/medical_1.jpg" alt="診療イメージ">
+      <img src="./assets/Infomation_Image/information_2.jpg" alt="受付スタッフ" loading="lazy">
+      <img src="./assets/Hospital_Exterior/hospital_3.jpg" alt="院内風景" loading="lazy">
+      <img src="./assets/Medical_Image/medical_1.jpg" alt="診療イメージ" loading="lazy">
     </section>
 
     <section id="hours" class="hours-section container small-container">
@@ -95,7 +99,7 @@
     </section>
 
     <section class="feature-image">
-      <img src="./assets/Infomation_Image/information_3.jpg" alt="看護師と患者">
+      <img src="./assets/Infomation_Image/information_3.jpg" alt="看護師と患者" loading="lazy">
     </section>
 
     <section id="about" class="about-section container">
@@ -105,12 +109,12 @@
         <p>創立以来、私たちは「患者様一人ひとりに寄り添った診療」を大切にし、地域密着型の医療を提供してまいりました。</p>
         <p>今後も、皆様の健康維持と病気予防に貢献するため、より良い医療サービスを提供し続けることをお約束いたします。</p>
       </div>
-      <img src="./assets/Hospital_Exterior/hospital_6.jpg" alt="佐藤医院の院内">
+      <img src="./assets/Hospital_Exterior/hospital_6.jpg" alt="佐藤医院の院内" loading="lazy">
     </section>
 
     <section id="greeting" class="greeting-section">
       <div class="container greeting-inner">
-        <img src="./assets/Doctor_Image/sato_taro.jpg" alt="佐藤医院 院長 佐藤太郎">
+        <img src="./assets/Doctor_Image/sato_taro.jpg" alt="佐藤医院 院長 佐藤太郎" loading="lazy">
         <div>
           <h2>ご挨拶</h2>
           <p>こんにちは。<br>佐藤医院の院長、佐藤太郎と申します。当院のホームページをご覧いただき、ありがとうございます。</p>
@@ -135,11 +139,11 @@
             <li>コメント: 患者様にとって気軽に相談できる「かかりつけ医」を目指しています。どんな小さな不安でも、まずはご相談ください。</li>
           </ul>
         </div>
-        <img src="./assets/Doctor_Image/firstView.jpg" alt="院長 佐藤太郎">
+        <img src="./assets/Doctor_Image/firstView.jpg" alt="院長 佐藤太郎" loading="lazy">
       </article>
 
       <article class="staff-row image-left">
-        <img class="staff-photo-suzuki" src="./assets/Doctor_Image/suzuki_mari.jpg" alt="看護師長 鈴木真理">
+        <img class="staff-photo-suzuki" src="./assets/Doctor_Image/suzuki_mari.jpg" alt="看護師長 鈴木真理" loading="lazy">
         <div>
           <h3>看護師長: 鈴木 真理</h3>
           <ul>
@@ -159,11 +163,11 @@
             <li>コメント: 検査は不安が伴うこともありますが、できるだけリラックスしていただけるよう、優しく丁寧な対応を心がけています。</li>
           </ul>
         </div>
-        <img src="./assets/Doctor_Image/takahashi_yumi.jpg" alt="臨床検査技師 高橋由美">
+        <img src="./assets/Doctor_Image/takahashi_yumi.jpg" alt="臨床検査技師 高橋由美" loading="lazy">
       </article>
 
       <article class="staff-row image-left">
-        <img class="staff-photo-yamamoto" src="./assets/Doctor_Image/yamamoto_hana.jpg" alt="医療事務 山本花">
+        <img class="staff-photo-yamamoto" src="./assets/Doctor_Image/yamamoto_hana.jpg" alt="医療事務 山本花" loading="lazy">
         <div>
           <h3>医療事務: 山本 花</h3>
           <ul>
@@ -178,7 +182,7 @@
     <section id="access" class="access-section container">
       <h2>アクセス</h2>
       <div class="access-grid">
-        <img src="./assets/map.jpg" alt="佐藤医院周辺地図">
+        <img src="./assets/map.jpg" alt="佐藤医院周辺地図" loading="lazy">
         <div>
           <p>〒123-4567 東京都台東区上野0-0-0</p>
           <p>最寄駅: JR上野駅より徒歩5分</p>
@@ -204,7 +208,7 @@
       </section>
 
       <section class="footer-hours">
-        <h3><img src="./assets/icons/clock.png" alt="" aria-hidden="true">診察時間</h3>
+        <h3><img src="./assets/icons/clock.png" alt="" aria-hidden="true">診療時間</h3>
         <table>
           <caption class="visually-hidden">フッターの診療時間一覧</caption>
           <thead>
@@ -224,16 +228,15 @@
           <a href="#news">お知らせ</a>
           <a href="#about">当院について</a>
           <a href="#services">診療内容</a>
-          <a href="#greeting">医院長挨拶</a>
+          <a href="#greeting">院長挨拶</a>
           <a href="#hours">診療時間</a>
           <a href="#access">アクセス</a>
           <a href="#home">ホーム</a>
-          <a href="#staff">医師紹介</a>
+          <a href="#staff">スタッフ紹介</a>
         </div>
       </section>
     </div>
     <p class="copyright">© 2026 Satou Clinic</p>
   </footer>
-  <div id="site-search" hidden></div>
 </body>
 </html>
