@@ -634,8 +634,16 @@ a:focus-visible {
 }
 
 .signature {
-  padding-top: 3px;
+  padding-top: 14px;
   text-align: right;
+}
+
+.signature-text {
+  display: inline-block;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  font-family: "Sawarabi Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
 }
 
 /* Staff */
