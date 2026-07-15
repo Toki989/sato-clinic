@@ -14,7 +14,7 @@
   --color-tag-gray: #68717a;
   --color-tag-green: #17ad5c;
 
-  --font-family-base: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-family-base: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 
   --layout-min-width: 1440px;
   --layout-container: 1280px;
@@ -335,9 +335,10 @@ a:focus-visible {
 .today-card strong {
   display: block;
   color: var(--color-green-deep);
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .today-card p {
