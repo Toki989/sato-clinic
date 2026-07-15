@@ -247,6 +247,12 @@ a:focus-visible {
   box-shadow: 0 4px 7px var(--color-shadow);
 }
 
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .news-card h2,
 .today-card h2 {
   margin: 0 0 20px;
@@ -260,12 +266,21 @@ a:focus-visible {
   text-decoration: none;
 }
 
+.news-card h2 {
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
 .news-card ul {
   margin: 0;
   padding: 0;
   list-style: none;
   width: fit-content;
   margin-inline: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .news-card li {
@@ -273,10 +288,14 @@ a:focus-visible {
   grid-template-columns: 142px 84px 1fr;
   align-items: center;
   gap: 10px;
-  margin: 9px 0;
+  margin: 0;
   font-size: 15px;
   line-height: 1.2;
   text-align: left;
+}
+
+.news-card li.news-item-double-tag {
+  grid-template-columns: 142px 84px 84px 1fr;
 }
 
 .news-card h2 a:hover,
