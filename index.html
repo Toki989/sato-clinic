@@ -87,13 +87,8 @@
       <h2>診療時間</h2>
       <table aria-describedby="hours-note">
         <caption class="visually-hidden">佐藤医院の診療時間一覧</caption>
-        <thead>
-          <tr><th scope="col"></th><th scope="col"></th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th><th scope="col">日</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">午前</th><td>9:00〜12:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>●</td><td>―</td></tr>
-          <tr><th scope="row">午後</th><td>13:30〜18:00</td><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>―</td><td>―</td></tr>
-        </tbody>
+        <thead id="hours-table-head"></thead>
+        <tbody id="hours-table-body"></tbody>
       </table>
       <p id="hours-note">受付時間: 午前 8:00〜11:00 / 午後 12:00〜17:00<br>休診日: 木曜日・土曜午後・日曜日<br>※祝祭日も診療を行っておりますが、休診日もございますため事前にご確認ください。</p>
     </section>
@@ -211,13 +206,8 @@
         <h3><img src="./assets/icons/clock.png" alt="" aria-hidden="true">診療時間</h3>
         <table>
           <caption class="visually-hidden">フッターの診療時間一覧</caption>
-          <thead>
-            <tr><th scope="col"></th><th scope="col">月</th><th scope="col">火</th><th scope="col">水</th><th scope="col">木</th><th scope="col">金</th><th scope="col">土</th></tr>
-          </thead>
-          <tbody>
-            <tr><th scope="row">9:00〜12:00</th><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>●</td></tr>
-            <tr><th scope="row">13:30〜18:00</th><td>●</td><td>●</td><td>●</td><td>―</td><td>●</td><td>―</td></tr>
-          </tbody>
+          <thead id="footer-hours-table-head"></thead>
+          <tbody id="footer-hours-table-body"></tbody>
         </table>
         <p class="holiday">休診日<br><small>木曜・土曜午後・日曜</small></p>
       </section>
@@ -238,5 +228,6 @@
     </div>
     <p class="copyright">© 2026 Satou Clinic</p>
   </footer>
+  <script src="./js/clinic-hours.js"></script>
 </body>
 </html>
