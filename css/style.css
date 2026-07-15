@@ -80,6 +80,14 @@ a:focus-visible {
   margin: 0 auto;
 }
 
+.mobile-only,
+.news-slider,
+.hours-cards,
+.staff-cards,
+.sitemap-mobile {
+  display: none !important;
+}
+
 .small-container {
   width: min(var(--layout-container-narrow), calc(100% - (var(--layout-gutter) * 2)));
 }
@@ -371,6 +379,59 @@ a:focus-visible {
   justify-content: space-evenly;
 }
 
+.news-slider {
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.news-slider-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  gap: 12px;
+}
+
+.news-slide {
+  min-height: 220px;
+  padding: 20px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcf9 100%);
+  scroll-snap-align: start;
+}
+
+.news-slide time {
+  display: block;
+  margin-bottom: 10px;
+  color: #4b5d53;
+  font-size: 14px;
+}
+
+.news-slide-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.news-slide a {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.news-slide p {
+  margin: 0;
+  color: #46564d;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .news-card li {
   display: grid;
   grid-template-columns: 142px 84px minmax(0, 1fr);
@@ -596,6 +657,7 @@ a:focus-visible {
 
 .feature-image {
   min-height: 600px;
+  margin: 0;
 }
 
 .feature-image img {
@@ -654,6 +716,29 @@ a:focus-visible {
   margin: 31px 0 0;
   font-size: 14px;
   line-height: 1.75;
+}
+
+.hours-cards {
+  display: grid;
+  gap: 16px;
+}
+
+.hours-card {
+  padding: 18px;
+  border: 1px solid #afcbb8;
+  border-radius: 16px;
+  background: #f7fcf8;
+}
+
+.hours-card h3 {
+  margin: 0 0 10px;
+  color: var(--color-green-deep);
+  font-size: 20px;
+}
+
+.hours-card p {
+  margin: 0 0 8px;
+  font-size: 14px;
 }
 
 /* About */
@@ -809,6 +894,57 @@ a:focus-visible {
   margin: 9px 0;
   font-size: 17px;
   line-height: 1.78;
+}
+
+.staff-cards {
+  display: grid;
+  gap: 18px;
+}
+
+.staff-card {
+  border: 1px solid #bfd7c6;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.staff-card summary {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.staff-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.staff-card summary span:first-child {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.staff-card summary span:last-child {
+  color: #456353;
+  font-size: 14px;
+}
+
+.staff-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.staff-card p {
+  margin: 0;
+  padding: 0 20px 16px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.staff-card p:first-of-type {
+  padding-top: 18px;
 }
 
 /* Access */
@@ -986,6 +1122,39 @@ a:focus-visible {
   gap: 20px 24px;
 }
 
+.sitemap-mobile summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-green);
+  border-radius: 8px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px;
+}
+
+.sitemap-mobile summary::-webkit-details-marker {
+  display: none;
+}
+
+.sitemap-mobile summary::after {
+  content: "+";
+  font-size: 20px;
+  line-height: 1;
+}
+
+.sitemap-mobile[open] summary::after {
+  content: "-";
+}
+
+.sitemap-mobile > div {
+  display: grid;
+  gap: 14px;
+  padding-top: 16px;
+}
+
 .sitemap a {
   color: #333;
   font-size: 15px;
@@ -1073,14 +1242,72 @@ a:focus-visible {
 
   .site-header {
     height: auto;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 
-  .header-inner,
+  .header-inner {
+    gap: 12px;
+    width: calc(100% - 20px);
+  }
+
+  .site-logo {
+    width: 120px;
+  }
+
   .utility-nav {
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .utility-nav a {
+    font-size: 9px;
+  }
+
+  .utility-nav a:not(.menu-button) {
+    width: 38px;
+  }
+
+  .utility-icon {
+    width: 30px;
+    height: 32px;
+  }
+
+  .utility-nav img {
+    width: 30px;
+    height: 32px;
+  }
+
+  .utility-nav a[aria-label="お知らせ"] {
+    display: none;
+  }
+
+  .menu-button {
+    width: 42px;
+    gap: 8px;
+    transform: none;
+  }
+
+  .menu-button i,
+  .menu-button i::before,
+  .menu-button i::after {
+    width: 28px;
+  }
+
+  .menu-button i {
+    height: 7px;
+    background-size: 28px 3px;
+  }
+
+  .menu-button span {
+    font-size: 9px;
+  }
+
+  .menu-button i::before {
+    transform: translateY(-9px);
+  }
+
+  .menu-button i::after {
+    transform: translateY(9px);
   }
 
   .hero {
@@ -1101,6 +1328,33 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .summary-cards {
+    gap: 20px;
+    width: calc(100% - 24px);
+    margin-top: 24px;
+  }
+
+  .news-list-desktop,
+  .hours-table-desktop,
+  .desktop-staff,
+  .sitemap-desktop {
+    display: none !important;
+  }
+
+  .news-slider,
+  .hours-cards,
+  .staff-cards {
+    display: block !important;
+  }
+
+  .staff-cards {
+    display: grid !important;
+  }
+
+  .sitemap-mobile {
+    display: block !important;
+  }
+
   .news-card,
   .today-card,
   .hours-section,
@@ -1112,15 +1366,54 @@ a:focus-visible {
     padding-bottom: 32px;
   }
 
+  .summary-cards,
+  .departments,
+  .hours-section,
+  .about-section,
+  .greeting-inner,
+  .staff-section,
+  .access-section,
+  .footer-grid {
+    width: min(100%, calc(100% - 24px));
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .news-card,
   .today-card {
+    width: 100%;
+    min-width: 0;
     padding: 24px;
   }
 
-  .news-card li,
-  .news-card li.news-item-double-tag {
-    grid-template-columns: 1fr;
-    gap: 6px;
+  .news-card h2,
+  .today-card h2 {
+    font-size: 20px;
+  }
+
+  .today-card strong {
+    white-space: normal;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .today-card p {
+    font-size: 15px;
+  }
+
+  .today-card a {
+    padding: 0 36px 0 16px;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  .news-slide {
+    min-height: unset;
+    padding: 18px 16px;
+  }
+
+  .news-slide a {
+    font-size: 16px;
   }
 
   .hours-section th,
@@ -1150,11 +1443,133 @@ a:focus-visible {
   }
 
   .photo-row {
-    gap: 16px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    width: calc(100% - 24px);
+    margin-top: 40px;
+    padding: 0 0 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .photo-row img {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+  }
+
+  .photo-row::-webkit-scrollbar,
+  .news-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .photo-row,
+  .news-slider {
+    scrollbar-width: none;
+  }
+
+  .hours-section p {
+    margin-top: 20px;
+  }
+
+  .hours-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .feature-image {
+    min-height: 260px;
+    width: 100%;
+    margin: 20px 0 0;
+  }
+
+  .feature-image img {
+    min-height: 260px;
+    object-position: center;
+  }
+
+  .about-section {
+    gap: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .about-copy h2 {
+    margin-bottom: 24px;
+  }
+
+  .about-copy p {
+    margin-bottom: 20px;
+  }
+
+  .greeting-inner,
+  .staff-section,
+  .access-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .staff-intro {
+    margin-bottom: 32px;
+  }
+
+  .hours-card h3 {
+    font-size: 18px;
+  }
+
+  .staff-card summary {
+    padding: 16px;
+  }
+
+  .staff-card summary span:first-child {
+    font-size: 17px;
+  }
+
+  .staff-card img {
+    height: 200px;
+  }
+
+  .staff-card p {
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 14px;
+  }
+
+  .staff-card p:first-of-type {
+    padding-top: 16px;
   }
 
   .footer-hours {
     overflow-x: auto;
+  }
+
+  .footer-grid {
+    gap: 20px;
+    width: calc(100% - 24px);
+  }
+
+  .footer-grid section {
+    padding-bottom: 20px;
+  }
+
+  .footer-access p,
+  .clinic-info p,
+  .footer-hours table,
+  .sitemap a {
+    font-size: 14px;
+  }
+
+  .sitemap > h3 {
+    margin-bottom: 14px;
+  }
+
+  .sitemap-mobile summary {
+    background: var(--color-white);
+  }
+
+  .sitemap-mobile > div {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
 

@@ -1,6 +1,6 @@
 const clinicHours = {
   symbols: {
-    open: "●",
+    open: "○",
     closed: "―"
   },
   days: ["月", "火", "水", "木", "金", "土", "日"],
@@ -28,9 +28,9 @@ function renderHoursTable(headId, bodyId, options) {
     ? ["", "", ...clinicHours.days]
     : ["", ...clinicHours.days];
 
-  thead.innerHTML = `
-    <tr>${headerCells.map((day) => `<th scope="col">${day}</th>`).join("")}</tr>
-  `;
+  thead.innerHTML = `<tr>${headerCells
+    .map((day) => `<th scope="col">${day}</th>`)
+    .join("")}</tr>`;
 
   tbody.innerHTML = clinicHours.slots
     .map((slot) => {
@@ -47,16 +47,6 @@ function renderHoursTable(headId, bodyId, options) {
     })
     .join("");
 }
-
-renderHoursTable("hours-table-head", "hours-table-body", {
-  showTimeColumn: true,
-  dayCount: clinicHours.days.length
-});
-
-renderHoursTable("footer-hours-table-head", "footer-hours-table-body", {
-  showTimeColumn: false,
-  dayCount: 6
-});
 
 function setupScrollFadeIn() {
   const sections = document.querySelectorAll("main > section, main > section section");
@@ -94,8 +84,22 @@ function setupScrollFadeIn() {
   });
 }
 
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", setupScrollFadeIn);
-} else {
+function init() {
+  renderHoursTable("hours-table-head", "hours-table-body", {
+    showTimeColumn: true,
+    dayCount: clinicHours.days.length
+  });
+
+  renderHoursTable("footer-hours-table-head", "footer-hours-table-body", {
+    showTimeColumn: false,
+    dayCount: 6
+  });
+
   setupScrollFadeIn();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
 }

@@ -50,14 +50,59 @@
 
     <section class="summary-cards container">
       <article class="news-card">
-        <h2 id="news"><a href="#news-list">病院からのお知らせ</a></h2>
-        <ul>
-          <li id="news-list"><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#contact">インフルエンザ予防接種について</a></li>
+        <h2 id="news"><a href="#news-anchor">病院からのお知らせ</a></h2>
+        <ul class="news-list-desktop">
+          <li id="news-anchor"><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#contact">インフルエンザ予防接種について</a></li>
           <li class="news-item-double-tag"><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><span class="tag tag-gray">休診情報</span><a href="#hours">年末年始の休診について</a></li>
           <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-green">ご案内</span><a href="#access">健康診断のご案内</a></li>
           <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-orange">重要</span><a href="#news">新型コロナウイルス対策について</a></li>
           <li><time datetime="2026-01-01">20XX/XX/XX</time><span class="tag tag-green">ご案内</span><a href="#contact">オンライン診療の導入について</a></li>
         </ul>
+        <div class="news-slider mobile-only" aria-label="お知らせスライダー">
+          <div class="news-slider-track">
+            <article class="news-slide">
+              <time datetime="2026-01-01">20XX/XX/XX</time>
+              <div class="news-slide-tags">
+                <span class="tag tag-orange">重要</span>
+              </div>
+              <a href="#contact">インフルエンザ予防接種について</a>
+              <p>予約枠と接種対象年齢をご確認ください。</p>
+            </article>
+            <article class="news-slide">
+              <time datetime="2026-01-01">20XX/XX/XX</time>
+              <div class="news-slide-tags">
+                <span class="tag tag-orange">重要</span>
+                <span class="tag tag-gray">休診情報</span>
+              </div>
+              <a href="#hours">年末年始の休診について</a>
+              <p>連休前後は混雑が予想されるため早めの受診がおすすめです。</p>
+            </article>
+            <article class="news-slide">
+              <time datetime="2026-01-01">20XX/XX/XX</time>
+              <div class="news-slide-tags">
+                <span class="tag tag-green">ご案内</span>
+              </div>
+              <a href="#access">健康診断のご案内</a>
+              <p>企業健診と定期健診の受付時間を掲載しています。</p>
+            </article>
+            <article class="news-slide">
+              <time datetime="2026-01-01">20XX/XX/XX</time>
+              <div class="news-slide-tags">
+                <span class="tag tag-orange">重要</span>
+              </div>
+              <a href="#news">新型コロナウイルス対策について</a>
+              <p>院内での感染対策と来院時のお願いをまとめています。</p>
+            </article>
+            <article class="news-slide">
+              <time datetime="2026-01-01">20XX/XX/XX</time>
+              <div class="news-slide-tags">
+                <span class="tag tag-green">ご案内</span>
+              </div>
+              <a href="#contact">オンライン診療の導入について</a>
+              <p>再診の方を対象にオンライン診療の受付を開始しました。</p>
+            </article>
+          </div>
+        </div>
       </article>
 
       <article class="today-card">
@@ -85,11 +130,30 @@
 
     <section id="hours" class="hours-section container small-container">
       <h2>診療時間</h2>
-      <table aria-describedby="hours-note">
+      <table class="hours-table-desktop" aria-describedby="hours-note">
         <caption class="visually-hidden">佐藤医院の診療時間一覧</caption>
         <thead id="hours-table-head"></thead>
         <tbody id="hours-table-body"></tbody>
       </table>
+      <div class="hours-cards mobile-only" aria-label="スマートフォン向け診療時間">
+        <article class="hours-card">
+          <h3>平日</h3>
+          <p><strong>診療時間</strong> 9:00〜12:00 / 13:30〜18:00</p>
+          <p><strong>受付時間</strong> 8:00〜11:00 / 12:00〜17:00</p>
+          <p>月・火・水・金</p>
+        </article>
+        <article class="hours-card">
+          <h3>土曜</h3>
+          <p><strong>診療時間</strong> 9:00〜12:00</p>
+          <p><strong>受付時間</strong> 8:00〜11:00</p>
+          <p>午後休診</p>
+        </article>
+        <article class="hours-card">
+          <h3>休診</h3>
+          <p>木曜日・日曜日</p>
+          <p>祝祭日は診療日変更の可能性があります。</p>
+        </article>
+      </div>
       <p id="hours-note">受付時間: 午前 8:00〜11:00 / 午後 12:00〜17:00<br>休診日: 木曜日・土曜午後・日曜日<br>※祝祭日も診療を行っておりますが、休診日もございますため事前にご確認ください。</p>
     </section>
 
@@ -125,7 +189,7 @@
       <h2>スタッフ紹介</h2>
       <p class="staff-intro">地域の皆様に安心してご来院いただけるよう、スタッフ一同、誠心誠意対応いたします。それぞれの専門性と温かさを活かし、皆様の健康を支えるパートナーとしてお力になれるよう努めてまいります。</p>
 
-      <article class="staff-row image-right">
+      <article class="staff-row image-right desktop-staff">
         <div>
           <h3>院長: 佐藤 太郎</h3>
           <ul>
@@ -137,7 +201,7 @@
         <img src="./assets/Doctor_Image/firstView.jpg" alt="院長 佐藤太郎" loading="lazy">
       </article>
 
-      <article class="staff-row image-left">
+      <article class="staff-row image-left desktop-staff">
         <img class="staff-photo-suzuki" src="./assets/Doctor_Image/suzuki_mari.jpg" alt="看護師長 鈴木真理" loading="lazy">
         <div>
           <h3>看護師長: 鈴木 真理</h3>
@@ -149,7 +213,7 @@
         </div>
       </article>
 
-      <article class="staff-row image-right">
+      <article class="staff-row image-right desktop-staff">
         <div>
           <h3>臨床検査技師: 高橋 由美</h3>
           <ul>
@@ -161,7 +225,7 @@
         <img src="./assets/Doctor_Image/takahashi_yumi.jpg" alt="臨床検査技師 高橋由美" loading="lazy">
       </article>
 
-      <article class="staff-row image-left">
+      <article class="staff-row image-left desktop-staff">
         <img class="staff-photo-yamamoto" src="./assets/Doctor_Image/yamamoto_hana.jpg" alt="医療事務 山本花" loading="lazy">
         <div>
           <h3>医療事務: 山本 花</h3>
@@ -172,6 +236,33 @@
           </ul>
         </div>
       </article>
+
+      <div class="staff-cards mobile-only">
+        <details class="staff-card">
+          <summary><span>院長: 佐藤 太郎</span><span>生活習慣病・呼吸器疾患</span></summary>
+          <img src="./assets/Doctor_Image/firstView.jpg" alt="院長 佐藤太郎" loading="lazy">
+          <p>光明大学医学部卒業後、瑞穂中央総合病院で内科医として10年間勤務。その後、地域医療への貢献を目指し、佐藤医院を開院。</p>
+          <p>患者様にとって気軽に相談できる「かかりつけ医」を目指しています。どんな小さな不安でも、まずはご相談ください。</p>
+        </details>
+        <details class="staff-card">
+          <summary><span>看護師長: 鈴木 真理</span><span>親身な対応・健康管理指導</span></summary>
+          <img class="staff-photo-suzuki" src="./assets/Doctor_Image/suzuki_mari.jpg" alt="看護師長 鈴木真理" loading="lazy">
+          <p>白桜大学看護学部卒業後、緑が丘大学病院で10年勤務。地域医療に携わりたい思いから、佐藤医院に入職。</p>
+          <p>安心して治療を受けていただけるよう、いつも笑顔でお待ちしています。些細なことでもお気軽にご相談ください。</p>
+        </details>
+        <details class="staff-card">
+          <summary><span>臨床検査技師: 高橋 由美</span><span>血液検査・心電図・超音波検査</span></summary>
+          <img src="./assets/Doctor_Image/takahashi_yumi.jpg" alt="臨床検査技師 高橋由美" loading="lazy">
+          <p>東都臨床検査技術専門学校を卒業後、武蔵中央医療センターにて15年間の臨床検査技師としての経験を積む。</p>
+          <p>検査は不安が伴うこともありますが、できるだけリラックスしていただけるよう、優しく丁寧な対応を心がけています。</p>
+        </details>
+        <details class="staff-card">
+          <summary><span>医療事務: 山本 花</span><span>受付業務・カルテ管理</span></summary>
+          <img class="staff-photo-yamamoto" src="./assets/Doctor_Image/yamamoto_hana.jpg" alt="医療事務 山本花" loading="lazy">
+          <p>希望医療カレッジ卒業後、さくら診療所にて受付業務を担当。現在は佐藤医院で患者様対応を担当。</p>
+          <p>皆様に気持ちよくご利用いただけるよう、笑顔と真心を大切にしております。初めての方もどうぞ安心してお越しください。</p>
+        </details>
+      </div>
     </section>
 
     <section id="access" class="access-section container">
@@ -214,7 +305,7 @@
 
       <section id="site-map" class="sitemap">
         <h3><img src="./assets/icons/sitemap.png" alt="" aria-hidden="true">サイトマップ</h3>
-        <div>
+        <div class="sitemap-desktop">
           <a href="#news">お知らせ</a>
           <a href="#about">当院について</a>
           <a href="#services">診療内容</a>
@@ -224,6 +315,19 @@
           <a href="#home">ホーム</a>
           <a href="#staff">スタッフ紹介</a>
         </div>
+        <details class="sitemap-mobile mobile-only">
+          <summary>サイトマップを開く</summary>
+          <div>
+            <a href="#news">お知らせ</a>
+            <a href="#about">当院について</a>
+            <a href="#services">診療内容</a>
+            <a href="#greeting">院長挨拶</a>
+            <a href="#hours">診療時間</a>
+            <a href="#access">アクセス</a>
+            <a href="#home">ホーム</a>
+            <a href="#staff">スタッフ紹介</a>
+          </div>
+        </details>
       </section>
     </div>
     <p class="copyright">© 2026 Satou Clinic</p>
