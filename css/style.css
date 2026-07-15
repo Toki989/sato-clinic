@@ -1178,9 +1178,359 @@ a:focus-visible {
   text-align: center;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1201px) and (max-width: 1368px) {
+  .hero {
+    height: 760px;
+  }
+
+  .hero h1 {
+    top: 64px;
+    right: 64px;
+    font-size: 60px;
+    letter-spacing: 0.12em;
+  }
+
+  .summary-cards {
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 430px);
+    gap: 36px;
+    margin-top: -108px;
+  }
+
+  .news-card,
+  .today-card {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .departments {
+    column-gap: 64px;
+    row-gap: 48px;
+    padding-top: 112px;
+  }
+
+  .departments article {
+    height: 276px;
+  }
+
+  .departments article img {
+    width: 210px;
+    height: 184px;
+  }
+
+  .departments .department-icon-lifestyle {
+    width: 236px;
+    height: 204px;
+  }
+
+  .departments article h3 {
+    font-size: 34px;
+  }
+
+  .photo-row {
+    margin-top: 92px;
+  }
+
+  .hours-section {
+    padding: 112px 0 132px;
+  }
+
+  .about-section {
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 520px);
+    gap: 56px;
+    padding: 112px 48px 120px;
+  }
+
+  .about-copy h2 {
+    margin-bottom: 48px;
+    font-size: 40px;
+  }
+
+  .about-copy p {
+    margin-bottom: 30px;
+    line-height: 2;
+  }
+
+  .about-section > img {
+    width: 100%;
+    height: 360px;
+  }
+
+  .greeting-inner {
+    grid-template-columns: minmax(380px, 440px) minmax(0, 1fr);
+    gap: 60px;
+    padding: 100px 48px 92px;
+  }
+
+  .greeting-inner > img {
+    width: 100%;
+    height: 620px;
+  }
+
+  .staff-section {
+    padding: 120px 48px 136px;
+  }
+
+  .staff-intro {
+    margin-bottom: 84px;
+  }
+
+  .staff-row,
+  .staff-row.image-left {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+    gap: 48px;
+    margin-bottom: 104px;
+  }
+
+  .staff-row.image-left > div {
+    order: -1;
+  }
+
+  .staff-row.image-left img {
+    order: 0;
+  }
+
+  .staff-row img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .access-section {
+    padding: 0 28px 220px;
+  }
+
+  .access-section h2 {
+    margin-bottom: 72px;
+    font-size: 42px;
+  }
+
+  .access-grid {
+    grid-template-columns: minmax(440px, 520px) minmax(0, 1fr);
+    gap: 56px;
+  }
+
+  .access-grid > img {
+    width: 100%;
+    height: 520px;
+  }
+
+  .access-grid p {
+    margin-top: 52px;
+    font-size: 21px;
+  }
+
+  .access-grid .access-note {
+    margin-top: 52px;
+    font-size: 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.08fr 0.9fr 1.18fr 1fr;
+    gap: 18px;
+  }
+
+  .footer-grid section {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .summary-cards {
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.9fr);
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  .departments {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    column-gap: 32px;
+    row-gap: 28px;
+    padding-top: 88px;
+  }
+
+  .departments article {
+    height: 240px;
+  }
+
+  .departments article img {
+    width: 180px;
+    height: 156px;
+  }
+
+  .departments .department-icon-lifestyle {
+    width: 204px;
+    height: 176px;
+  }
+
+  .departments article h3 {
+    font-size: 30px;
+  }
+
+  .more-link {
+    grid-column: 2;
+    justify-self: end;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .photo-row {
+    margin-top: 80px;
+  }
+
+  .hours-section {
+    padding: 96px 0 112px;
+  }
+
+  .today-card strong {
+    white-space: normal;
+    font-size: 22px;
+    line-height: 1.45;
+  }
+
+  .today-card p {
+    font-size: 15px;
+  }
+
+  .about-section {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+    gap: 40px;
+    padding: 96px 20px 104px;
+  }
+
+  .about-section > img {
+    width: 100%;
+    max-width: 420px;
+    height: 320px;
+  }
+
+  .about-copy h2 {
+    margin-bottom: 36px;
+    font-size: 38px;
+  }
+
+  .about-copy p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .greeting-inner {
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    gap: 40px;
+    padding: 88px 24px;
+  }
+
+  .greeting-inner > img {
+    width: 100%;
+    max-width: 360px;
+    height: 520px;
+  }
+
+  .greeting-inner h2 {
+    font-size: 36px;
+  }
+
+  .staff-section {
+    padding: 96px 20px 112px;
+  }
+
+  .staff-intro {
+    margin-bottom: 64px;
+  }
+
+  .staff-row,
+  .staff-row.image-left {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 36px;
+    margin-bottom: 84px;
+  }
+
+  .staff-row.image-left img {
+    order: 0;
+  }
+
+  .staff-row.image-left > div {
+    order: -1;
+  }
+
+  .staff-row img {
+    width: 340px;
+    height: 240px;
+  }
+
+  .staff-row h3 {
+    margin-bottom: 18px;
+    font-size: 22px;
+  }
+
+  .staff-row li {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .access-section {
+    padding: 0 20px 160px;
+  }
+
+  .access-section h2 {
+    margin-bottom: 56px;
+    font-size: 40px;
+  }
+
+  .access-grid {
+    grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .access-grid > img {
+    width: 100%;
+    max-width: 420px;
+    height: 420px;
+  }
+
+  .access-grid p {
+    margin-top: 28px;
+    font-size: 20px;
+  }
+
+  .access-grid .access-note {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 32px;
+    padding: 36px 0 28px;
+  }
+
+  .footer-grid section {
+    padding: 0 0 20px;
+    border-right: none;
+    border-bottom: 1px solid #6b8f76;
+  }
+
+  .footer-grid section:nth-child(3),
+  .footer-grid section:nth-child(4) {
+    padding-bottom: 0;
+  }
+
+  .footer-grid section:nth-child(even) {
+    padding-left: 12px;
+  }
+
+  .footer-grid section:nth-child(odd) {
+    padding-right: 12px;
+  }
+
+  .footer-grid section:last-child,
+  .footer-grid section:nth-last-child(2) {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 960px) {
   .summary-cards,
-  .departments,
   .about-section,
   .greeting-inner,
   .staff-row,
@@ -1191,16 +1541,47 @@ a:focus-visible {
   }
 
   .summary-cards {
-    margin-top: 48px;
+    gap: 20px;
   }
 
   .departments {
-    justify-items: center;
-    row-gap: 32px;
-    padding-top: 96px;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 24px;
+    padding-top: 72px;
   }
 
-  .departments article,
+  .departments article {
+    height: 220px;
+  }
+
+  .departments article h3 {
+    font-size: 26px;
+  }
+
+  .more-link {
+    grid-column: auto;
+    justify-self: center;
+  }
+
+  .photo-row {
+    margin-top: 56px;
+  }
+
+  .hours-section {
+    padding: 72px 0 84px;
+  }
+
+  .about-section,
+  .greeting-inner,
+  .staff-section {
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+
+  .about-section {
+    gap: 28px;
+  }
+
   .about-section > img,
   .greeting-inner > img,
   .staff-row img,
@@ -1209,29 +1590,71 @@ a:focus-visible {
     max-width: 100%;
   }
 
-  .more-link {
-    grid-column: auto;
-    justify-self: center;
-    margin: 0;
+  .greeting-inner > img {
+    height: 420px;
   }
 
-  .about-section,
-  .greeting-inner,
-  .staff-section,
+  .staff-intro {
+    margin-bottom: 44px;
+  }
+
+  .staff-row,
+  .staff-row.image-left {
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .staff-row.image-left > div,
+  .staff-row.image-left img {
+    order: initial;
+  }
+
+  .staff-row h3 {
+    margin-bottom: 16px;
+  }
+
   .access-section {
-    padding-right: 0;
-    padding-left: 0;
+    padding-bottom: 120px;
+  }
+
+  .access-section h2 {
+    margin-bottom: 40px;
+  }
+
+  .access-grid {
+    gap: 24px;
+  }
+
+  .access-grid > img {
+    height: 360px;
+  }
+
+  .access-grid p {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .access-grid p + p {
+    margin-top: 16px;
+  }
+
+  .access-grid .access-note {
+    margin-top: 28px;
+    font-size: 16px;
+  }
+
+  .footer-grid {
+    gap: 20px;
   }
 
   .footer-grid section {
-    padding: 0 0 24px;
-    border-right: none;
-    border-bottom: 1px solid #6b8f76;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 18px;
   }
 
-  .footer-grid section:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  .footer-grid section:nth-last-child(2) {
+    border-bottom: 1px solid #6b8f76;
   }
 }
 
@@ -1334,6 +1757,47 @@ a:focus-visible {
     margin-top: 24px;
   }
 
+  .departments,
+  .about-section,
+  .greeting-inner,
+  .access-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .departments {
+    gap: 20px;
+    padding-top: 48px;
+  }
+
+  .departments article {
+    height: auto;
+    min-height: 210px;
+    border-radius: 24px;
+    padding: 24px 16px;
+  }
+
+  .departments article img {
+    width: min(190px, 70vw);
+    height: 150px;
+  }
+
+  .departments .department-icon-lifestyle {
+    width: min(210px, 76vw);
+    height: 164px;
+  }
+
+  .departments article h3 {
+    font-size: 26px;
+  }
+
+  .more-link {
+    grid-column: auto;
+    justify-self: center;
+    margin: 0;
+    font-size: 22px;
+  }
+
   .news-list-desktop,
   .hours-table-desktop,
   .desktop-staff,
@@ -1364,6 +1828,15 @@ a:focus-visible {
   .access-section {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+
+  .hours-section,
+  .about-section,
+  .greeting-inner,
+  .staff-section,
+  .access-section {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .summary-cards,
@@ -1494,6 +1967,17 @@ a:focus-visible {
     padding-bottom: 40px;
   }
 
+  .about-section > img,
+  .greeting-inner > img,
+  .access-grid > img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-section > img {
+    height: 280px;
+  }
+
   .about-copy h2 {
     margin-bottom: 24px;
   }
@@ -1507,6 +1991,35 @@ a:focus-visible {
   .access-section {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .greeting-inner {
+    gap: 24px;
+  }
+
+  .greeting-inner > img {
+    height: 420px;
+  }
+
+  .access-grid {
+    gap: 24px;
+  }
+
+  .access-grid > img {
+    height: 320px;
+  }
+
+  .access-grid p {
+    margin-top: 0;
+  }
+
+  .access-grid p + p {
+    margin-top: 14px;
+  }
+
+  .access-grid .access-note {
+    margin-top: 24px;
+    font-size: 1rem;
   }
 
   .staff-intro {
@@ -1549,7 +2062,14 @@ a:focus-visible {
   }
 
   .footer-grid section {
-    padding-bottom: 20px;
+    padding: 0 0 20px;
+    border-right: none;
+    border-bottom: 1px solid #6b8f76;
+  }
+
+  .footer-grid section:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .footer-access p,
