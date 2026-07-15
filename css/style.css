@@ -13,6 +13,7 @@
   --color-tag-orange: #f0a012;
   --color-tag-gray: #68717a;
   --color-tag-green: #17ad5c;
+  --color-tag-blue: #2f61df;
 
   --font-family-base: "BIZ UDPGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
 
@@ -328,6 +329,10 @@ a:focus-visible {
 
 .tag-green {
   background: var(--color-tag-green);
+}
+
+.tag-blue {
+  background: var(--color-tag-blue);
 }
 
 .today-card {
