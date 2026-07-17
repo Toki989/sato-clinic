@@ -26,6 +26,9 @@
   --radius-card: 17px;
   --radius-large: 39px;
   --radius-small: 7px;
+
+  --motion-responsive-duration: 0.32s;
+  --motion-responsive-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -550,7 +553,7 @@ a:focus-visible {
   justify-content: center;
   column-gap: 118px;
   row-gap: 68px;
-  padding-top: 138px;
+  padding-top: 120px;
 }
 
 .departments article {
@@ -630,7 +633,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
-  margin-top: 112px;
+  margin-top: 120px;
   padding: 0 6px;
 }
 
@@ -642,11 +645,12 @@ a:focus-visible {
 }
 
 .feature-image {
-  min-height: 600px;
+  height: clamp(440px, 42vw, 600px);
   margin: 0;
 }
 
 .feature-image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -656,7 +660,7 @@ a:focus-visible {
 /* Hours */
 
 .hours-section {
-  padding: 133px 0 165px;
+  padding: 120px 0;
 }
 
 .hours-section h2 {
@@ -734,7 +738,11 @@ a:focus-visible {
   grid-template-columns: minmax(0, 1fr) 585px;
   align-items: center;
   gap: 88px;
-  padding: 135px 70px 142px;
+  padding: 120px 70px;
+}
+
+.feature-image + .about-section {
+  padding-top: 80px;
 }
 
 .about-copy h2 {
@@ -777,7 +785,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 500px minmax(0, 1fr);
   gap: 140px;
-  padding: 118px 72px 100px;
+  padding: 120px 72px;
 }
 
 .greeting-inner > img {
@@ -816,7 +824,7 @@ a:focus-visible {
 /* Staff */
 
 .staff-section {
-  padding: 145px 70px 170px;
+  padding: 120px 70px;
 }
 
 .staff-section > h2 {
@@ -936,11 +944,11 @@ a:focus-visible {
 /* Access */
 
 .access-section {
-  padding: 0 36px 370px;
+  padding: 0 36px 120px;
 }
 
 .access-section h2 {
-  margin: 25px 0 90px;
+  margin: 0 0 64px;
   font-size: 46px;
   font-weight: 500;
   text-align: center;
@@ -960,7 +968,7 @@ a:focus-visible {
 }
 
 .access-grid p {
-  margin: 85px 0 0;
+  margin: 48px 0 0;
   font-size: 25px;
   line-height: 1.65;
 }
@@ -1213,17 +1221,21 @@ a:focus-visible {
   }
 
   .photo-row {
-    margin-top: 92px;
+    margin-top: 112px;
   }
 
   .hours-section {
-    padding: 112px 0 132px;
+    padding: 112px 0;
   }
 
   .about-section {
     grid-template-columns: minmax(0, 1fr) minmax(440px, 520px);
     gap: 56px;
-    padding: 112px 48px 120px;
+    padding: 112px 48px;
+  }
+
+  .feature-image + .about-section {
+    padding-top: 72px;
   }
 
   .about-copy h2 {
@@ -1244,7 +1256,7 @@ a:focus-visible {
   .greeting-inner {
     grid-template-columns: minmax(380px, 440px) minmax(0, 1fr);
     gap: 60px;
-    padding: 100px 48px 92px;
+    padding: 112px 48px;
   }
 
   .greeting-inner > img {
@@ -1253,7 +1265,7 @@ a:focus-visible {
   }
 
   .staff-section {
-    padding: 120px 48px 136px;
+    padding: 112px 48px;
   }
 
   .staff-intro {
@@ -1278,7 +1290,7 @@ a:focus-visible {
   }
 
   .access-section {
-    padding: 0 28px 220px;
+    padding: 0 28px 112px;
   }
 
   .access-section h2 {
@@ -1318,6 +1330,12 @@ a:focus-visible {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  :root {
+    --tablet-section-space: 96px;
+    --tablet-heading-large: clamp(2.125rem, 3.4vw, 2.35rem);
+    --tablet-heading-medium: clamp(2rem, 3.1vw, 2.2rem);
+  }
+
   .summary-cards {
     grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.9fr);
     gap: 28px;
@@ -1328,7 +1346,7 @@ a:focus-visible {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
     column-gap: 32px;
     row-gap: 28px;
-    padding-top: 88px;
+    padding-top: var(--tablet-section-space);
   }
 
   .departments article {
@@ -1354,14 +1372,32 @@ a:focus-visible {
     justify-self: end;
     margin-top: 0;
     margin-right: 0;
+    font-size: 24px;
+  }
+
+  .more-link .more-link-text {
+    font-size: 24px;
+  }
+
+  .more-link > span:last-child {
+    margin-left: 12px;
+    font-size: 36px;
   }
 
   .photo-row {
-    margin-top: 80px;
+    margin-top: var(--tablet-section-space);
   }
 
   .hours-section {
-    padding: 96px 0 112px;
+    padding: var(--tablet-section-space) 0;
+  }
+
+  .hours-section h2 {
+    font-size: var(--tablet-heading-medium);
+  }
+
+  .feature-image {
+    height: clamp(404px, 42vw, 504px);
   }
 
   .today-card strong {
@@ -1377,7 +1413,11 @@ a:focus-visible {
   .about-section {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
     gap: 40px;
-    padding: 96px 20px 104px;
+    padding: var(--tablet-section-space) 20px;
+  }
+
+  .feature-image + .about-section {
+    padding-top: calc(var(--tablet-section-space) * 0.72);
   }
 
   .about-section > img {
@@ -1388,7 +1428,7 @@ a:focus-visible {
 
   .about-copy h2 {
     margin-bottom: 36px;
-    font-size: 38px;
+    font-size: var(--tablet-heading-large);
   }
 
   .about-copy p {
@@ -1400,7 +1440,7 @@ a:focus-visible {
   .greeting-inner {
     grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
     gap: 40px;
-    padding: 88px 24px;
+    padding: var(--tablet-section-space) 24px;
   }
 
   .greeting-inner > img {
@@ -1410,11 +1450,11 @@ a:focus-visible {
   }
 
   .greeting-inner h2 {
-    font-size: 36px;
+    font-size: var(--tablet-heading-large);
   }
 
   .staff-section {
-    padding: 96px 20px 112px;
+    padding: var(--tablet-section-space) 20px;
   }
 
   .staff-intro {
@@ -1453,7 +1493,7 @@ a:focus-visible {
   }
 
   .access-section {
-    padding: 0 20px 160px;
+    padding: 0 20px var(--tablet-section-space);
   }
 
   .access-section h2 {
@@ -1514,6 +1554,10 @@ a:focus-visible {
 }
 
 @media (min-width: 769px) and (max-width: 960px) {
+  :root {
+    --tablet-section-space: 72px;
+  }
+
   .summary-cards,
   .about-section,
   .greeting-inner,
@@ -1531,7 +1575,7 @@ a:focus-visible {
   .departments {
     grid-template-columns: repeat(2, minmax(220px, 1fr));
     gap: 24px;
-    padding-top: 72px;
+    padding-top: var(--tablet-section-space);
   }
 
   .departments article {
@@ -1543,27 +1587,47 @@ a:focus-visible {
   }
 
   .more-link {
-    grid-column: auto;
-    justify-self: center;
+    grid-column: 2;
+    justify-self: end;
+    margin-top: -8px;
+    margin-right: 0;
+    font-size: 22px;
+  }
+
+  .more-link .more-link-text {
+    font-size: 22px;
+  }
+
+  .more-link > span:last-child {
+    margin-left: 10px;
+    font-size: 32px;
   }
 
   .photo-row {
-    margin-top: 56px;
+    margin-top: var(--tablet-section-space);
   }
 
   .hours-section {
-    padding: 72px 0 84px;
+    padding: var(--tablet-section-space) 0;
+  }
+
+  .feature-image {
+    height: clamp(340px, 42vw, 404px);
   }
 
   .about-section,
   .greeting-inner,
   .staff-section {
-    padding-top: 72px;
-    padding-bottom: 80px;
+    padding-top: var(--tablet-section-space);
+    padding-bottom: var(--tablet-section-space);
   }
 
   .about-section {
     gap: 28px;
+  }
+
+  .feature-image + .about-section {
+    padding-top: calc(var(--tablet-section-space) * 0.68);
   }
 
   .about-section > img,
@@ -1601,7 +1665,7 @@ a:focus-visible {
   }
 
   .access-section {
-    padding-bottom: 120px;
+    padding-bottom: var(--tablet-section-space);
   }
 
   .access-section h2 {
@@ -1648,6 +1712,11 @@ a:focus-visible {
 @media (max-width: 768px) {
   :root {
     --layout-gutter: 16px;
+    --mobile-section-space: clamp(3.5rem, 10vw, 4.5rem);
+    --mobile-heading-large: clamp(2rem, 5.8vw, 2.35rem);
+    --mobile-heading-medium: clamp(1.85rem, 5.2vw, 2.2rem);
+    --mobile-heading-compact: clamp(1.9rem, 5.7vw, 2.35rem);
+    --mobile-body: clamp(1rem, 2.8vw, 1.0625rem);
   }
 
   .site-header {
@@ -1746,7 +1815,6 @@ a:focus-visible {
     margin-top: 24px;
   }
 
-  .departments,
   .about-section,
   .greeting-inner,
   .access-grid,
@@ -1755,36 +1823,46 @@ a:focus-visible {
   }
 
   .departments {
-    gap: 20px;
-    padding-top: 48px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-top: var(--mobile-section-space);
   }
 
   .departments article {
     height: auto;
-    min-height: 210px;
+    min-height: 160px;
     border-radius: 24px;
-    padding: 24px 16px;
+    padding: 18px 10px;
   }
 
   .departments article img {
-    width: min(190px, 70vw);
-    height: 150px;
+    width: min(108px, 32vw);
+    height: 92px;
   }
 
   .departments .department-icon-lifestyle {
-    width: min(210px, 76vw);
-    height: 164px;
+    width: min(120px, 36vw);
+    height: 100px;
   }
 
   .departments article h3 {
-    font-size: 26px;
+    font-size: clamp(1rem, 4.6vw, 1.375rem);
   }
 
   .more-link {
-    grid-column: auto;
-    justify-self: center;
-    margin: 0;
-    font-size: 22px;
+    grid-column: 2;
+    justify-self: end;
+    margin: -4px 0 0;
+    font-size: 16px;
+  }
+
+  .more-link .more-link-text {
+    font-size: 16px;
+  }
+
+  .more-link > span:last-child {
+    margin-left: 6px;
+    font-size: 24px;
   }
 
   .news-list-desktop,
@@ -1850,7 +1928,7 @@ a:focus-visible {
 
   .news-card h2,
   .today-card h2 {
-    font-size: 20px;
+    font-size: clamp(1.25rem, 4.8vw, 1.375rem);
   }
 
   .today-card strong {
@@ -1861,6 +1939,7 @@ a:focus-visible {
 
   .today-card p {
     font-size: 15px;
+    line-height: 1.65;
   }
 
   .today-card a {
@@ -1879,8 +1958,7 @@ a:focus-visible {
   }
 
   .hours-section th,
-  .hours-section td,
-  .access-grid p {
+  .hours-section td {
     font-size: 1rem;
   }
 
@@ -1890,18 +1968,39 @@ a:focus-visible {
 
   .about-copy h2,
   .greeting-inner h2,
-  .staff-section > h2,
-  .access-section h2,
+  .staff-section > h2 {
+    font-size: var(--mobile-heading-large);
+  }
+
   .hours-section h2 {
-    font-size: clamp(2rem, 6vw, 2.75rem);
+    font-size: var(--mobile-heading-medium);
+  }
+
+  .access-section h2 {
+    font-size: var(--mobile-heading-compact);
   }
 
   .staff-intro,
   .about-copy p,
   .staff-row li,
   .greeting-inner p {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: var(--mobile-body);
+  }
+
+  .about-copy p {
+    line-height: 2.05;
+  }
+
+  .greeting-inner p {
+    line-height: 1.72;
+  }
+
+  .staff-intro {
+    line-height: 1.95;
+  }
+
+  .staff-row li {
+    line-height: 1.75;
   }
 
   .photo-row {
@@ -1909,7 +2008,7 @@ a:focus-visible {
     gap: 12px;
     overflow-x: auto;
     width: calc(100% - 24px);
-    margin-top: 40px;
+    margin-top: var(--mobile-section-space);
     margin-inline: auto;
     padding: 0 0 8px;
     scroll-snap-type: x mandatory;
@@ -1936,25 +2035,28 @@ a:focus-visible {
   }
 
   .hours-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: var(--mobile-section-space);
+    padding-bottom: var(--mobile-section-space);
   }
 
   .feature-image {
-    min-height: 260px;
+    height: clamp(240px, 58vw, 320px);
     width: 100%;
     margin: 20px 0 0;
   }
 
   .feature-image img {
-    min-height: 260px;
     object-position: center;
   }
 
   .about-section {
     gap: 24px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: var(--mobile-section-space);
+    padding-bottom: var(--mobile-section-space);
+  }
+
+  .feature-image + .about-section {
+    padding-top: calc(var(--mobile-section-space) * 0.62);
   }
 
   .about-section > img,
@@ -1965,7 +2067,7 @@ a:focus-visible {
   }
 
   .about-section > img {
-    height: 280px;
+    height: clamp(240px, 69vw, 406px);
   }
 
   .about-copy h2 {
@@ -1977,10 +2079,14 @@ a:focus-visible {
   }
 
   .greeting-inner,
-  .staff-section,
+  .staff-section {
+    padding-top: var(--mobile-section-space);
+    padding-bottom: var(--mobile-section-space);
+  }
+
   .access-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 0;
+    padding-bottom: var(--mobile-section-space);
   }
 
   .greeting-inner {
@@ -1988,7 +2094,7 @@ a:focus-visible {
   }
 
   .greeting-inner > img {
-    height: 420px;
+    height: clamp(440px, 132vw, 560px);
   }
 
   .access-grid {
@@ -1996,11 +2102,13 @@ a:focus-visible {
   }
 
   .access-grid > img {
-    height: 320px;
+    height: clamp(330px, 97vw, 610px);
   }
 
   .access-grid p {
     margin-top: 0;
+    font-size: clamp(1.0625rem, 3.8vw, 1.25rem);
+    line-height: 1.65;
   }
 
   .access-grid p + p {
@@ -2009,7 +2117,7 @@ a:focus-visible {
 
   .access-grid .access-note {
     margin-top: 24px;
-    font-size: 1rem;
+    font-size: clamp(1rem, 3.4vw, 1.125rem);
   }
 
   .staff-intro {
@@ -2029,13 +2137,13 @@ a:focus-visible {
   }
 
   .staff-card img {
-    height: auto;
+    height: clamp(220px, 66vw, 320px);
   }
 
   .staff-card p {
     padding-right: 16px;
     padding-left: 16px;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .staff-card p:first-of-type {
@@ -2080,6 +2188,166 @@ a:focus-visible {
   .sitemap-mobile > div {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(
+    .site-header,
+    .header-inner,
+    .site-logo-link,
+    .site-logo,
+    .utility-nav,
+    .utility-nav a,
+    .menu-button,
+    .menu-button i,
+    .menu-button i::before,
+    .menu-button i::after,
+    .menu-button span,
+    .hero,
+    .hero h1,
+    .hero-fade,
+    .container,
+    .small-container,
+    .summary-cards,
+    .news-card,
+    .today-card,
+    .news-card h2,
+    .today-card h2,
+    .today-card h2 img,
+    .today-card strong,
+    .today-card p,
+    .news-slide,
+    .news-slide a,
+    .departments,
+    .more-link,
+    .more-link .more-link-text,
+    .more-link > span:last-child,
+    .photo-row,
+    .photo-row img,
+    .feature-image,
+    .feature-image img,
+    .hours-section,
+    .hours-section h2,
+    .hours-section th,
+    .hours-section td,
+    .hours-card,
+    .about-section,
+    .about-copy h2,
+    .about-copy p,
+    .about-section > img,
+    .greeting-inner,
+    .greeting-inner > img,
+    .greeting-inner h2,
+    .greeting-inner p,
+    .staff-section,
+    .staff-section > h2,
+    .staff-intro,
+    .staff-row,
+    .staff-row.image-left,
+    .staff-row img,
+    .staff-row h3,
+    .staff-row li,
+    .staff-card,
+    .staff-card summary,
+    .staff-card img,
+    .staff-card p,
+    .access-section,
+    .access-section h2,
+    .access-grid,
+    .access-grid > img,
+    .access-grid p,
+    .footer-grid,
+    .footer-grid section,
+    .footer-grid h3,
+    .footer-grid h3 img,
+    .footer-access p,
+    .footer-hours table,
+    .sitemap > div,
+    .sitemap-mobile summary
+  ) {
+    transition-property:
+      width,
+      min-width,
+      max-width,
+      height,
+      min-height,
+      margin,
+      margin-top,
+      margin-right,
+      margin-bottom,
+      margin-left,
+      padding,
+      padding-top,
+      padding-right,
+      padding-bottom,
+      padding-left,
+      gap,
+      row-gap,
+      column-gap,
+      grid-template-columns,
+      grid-auto-columns,
+      flex-basis,
+      top,
+      right,
+      bottom,
+      left,
+      font-size,
+      line-height,
+      letter-spacing,
+      border-radius,
+      object-position;
+    transition-duration: var(--motion-responsive-duration);
+    transition-timing-function: var(--motion-responsive-ease);
+  }
+
+  .utility-icon,
+  .utility-nav img {
+    transition:
+      width var(--motion-responsive-duration) var(--motion-responsive-ease),
+      height var(--motion-responsive-duration) var(--motion-responsive-ease);
+  }
+
+  .utility-icon img {
+    transition:
+      opacity 0.2s ease,
+      width var(--motion-responsive-duration) var(--motion-responsive-ease),
+      height var(--motion-responsive-duration) var(--motion-responsive-ease);
+  }
+
+  .today-card a {
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      height var(--motion-responsive-duration) var(--motion-responsive-ease),
+      padding var(--motion-responsive-duration) var(--motion-responsive-ease),
+      font-size var(--motion-responsive-duration) var(--motion-responsive-ease),
+      letter-spacing var(--motion-responsive-duration) var(--motion-responsive-ease);
+  }
+
+  .departments article {
+    transition:
+      height var(--motion-responsive-duration) var(--motion-responsive-ease),
+      min-height var(--motion-responsive-duration) var(--motion-responsive-ease),
+      padding var(--motion-responsive-duration) var(--motion-responsive-ease),
+      border-radius var(--motion-responsive-duration) var(--motion-responsive-ease),
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .departments article img {
+    transition:
+      width var(--motion-responsive-duration) var(--motion-responsive-ease),
+      height var(--motion-responsive-duration) var(--motion-responsive-ease),
+      filter 0.25s ease;
+  }
+
+  .departments article h3 {
+    transition:
+      margin var(--motion-responsive-duration) var(--motion-responsive-ease),
+      font-size var(--motion-responsive-duration) var(--motion-responsive-ease),
+      color 0.25s ease;
   }
 }
 
