@@ -1260,19 +1260,16 @@ a:focus-visible {
     margin-bottom: 84px;
   }
 
-  .staff-row,
-  .staff-row.image-left {
+  .staff-row {
     grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
     gap: 48px;
     margin-bottom: 104px;
   }
 
-  .staff-row.image-left > div {
-    order: -1;
-  }
-
-  .staff-row.image-left img {
-    order: 0;
+  .staff-row.image-left {
+    grid-template-columns: minmax(360px, 420px) minmax(0, 1fr);
+    gap: 48px;
+    margin-bottom: 104px;
   }
 
   .staff-row img {
@@ -1591,9 +1588,12 @@ a:focus-visible {
     margin-bottom: 56px;
   }
 
-  .staff-row.image-left > div,
+  .staff-row.image-left > div {
+    order: -1;
+  }
+
   .staff-row.image-left img {
-    order: initial;
+    order: 0;
   }
 
   .staff-row h3 {
