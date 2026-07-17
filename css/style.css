@@ -165,21 +165,17 @@ a:focus-visible {
   color: var(--color-green-deep);
   text-decoration: none;
   font-size: 12px;
+  line-height: 1;
 }
 
 .utility-nav a:not(.menu-button),
 .menu-button {
-  gap: 12px;
-}
-
-.utility-nav a:not(.menu-button) {
   width: 52px;
+  height: 55px;
 }
 
 .menu-button {
-  width: 56px;
-  transform: translateY(8px);
-  gap: 16px;
+  gap: 5px;
 }
 
 .utility-icon {
@@ -219,7 +215,6 @@ a:focus-visible {
 .menu-button i::before,
 .menu-button i::after {
   display: block;
-  position: absolute;
   width: 37px;
   height: 3px;
   background: var(--color-text);
@@ -227,38 +222,29 @@ a:focus-visible {
 
 .menu-button i {
   position: relative;
-  width: 37px;
-  height: 9px;
-  background: linear-gradient(var(--color-text), var(--color-text)) center / 37px 3px no-repeat;
+  margin: 11px 0;
 }
 
 .menu-button i::before,
 .menu-button i::after {
   content: "";
+  position: absolute;
   left: 0;
 }
 
-.menu-button i::before,
-.menu-button i::after,
-.menu-button i {
-  top: 50%;
-}
-
-.menu-button i {
-  transform: translateY(-50%);
-}
-
 .menu-button i::before {
-  transform: translateY(-11px);
+  top: -11px;
 }
 
 .menu-button i::after {
-  transform: translateY(11px);
+  top: 11px;
 }
 
 .menu-button span {
   color: var(--color-text);
   font-size: 10px;
+  line-height: 1;
+  transform: translateY(4px);
 }
 
 /* Hero */
@@ -1686,8 +1672,10 @@ a:focus-visible {
     font-size: 9px;
   }
 
-  .utility-nav a:not(.menu-button) {
+  .utility-nav a:not(.menu-button),
+  .menu-button {
     width: 38px;
+    height: 32px;
   }
 
   .utility-icon {
@@ -1705,32 +1693,32 @@ a:focus-visible {
   }
 
   .menu-button {
-    width: 42px;
-    gap: 8px;
-    transform: none;
+    width: 38px;
+    gap: 3px;
   }
 
   .menu-button i,
   .menu-button i::before,
   .menu-button i::after {
     width: 28px;
+    height: 2px;
   }
 
   .menu-button i {
-    height: 7px;
-    background-size: 28px 3px;
+    margin: 7px 0;
   }
 
   .menu-button span {
-    font-size: 9px;
+    font-size: 7px;
+    transform: translateY(2px);
   }
 
   .menu-button i::before {
-    transform: translateY(-9px);
+    top: -7px;
   }
 
   .menu-button i::after {
-    transform: translateY(9px);
+    top: 7px;
   }
 
   .hero {
