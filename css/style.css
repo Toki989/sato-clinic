@@ -1426,8 +1426,8 @@ a:focus-visible {
 
   .staff-row,
   .staff-row.image-left {
-    grid-template-columns: minmax(0, 1fr) 340px;
-    gap: 36px;
+    grid-template-columns: 1fr;
+    gap: 28px;
     margin-bottom: 84px;
   }
 
@@ -1440,8 +1440,9 @@ a:focus-visible {
   }
 
   .staff-row img {
-    width: 340px;
-    height: 240px;
+    width: min(100%, 760px);
+    height: auto;
+    justify-self: center;
   }
 
   .staff-row h3 {
@@ -2027,7 +2028,7 @@ a:focus-visible {
   }
 
   .staff-card img {
-    height: 200px;
+    height: auto;
   }
 
   .staff-card p {
