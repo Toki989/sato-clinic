@@ -1089,8 +1089,8 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 1.12fr 0.92fr 1.28fr 1.12fr;
   gap: 24px;
-  min-height: 340px;
-  padding: 42px 0 25px;
+  min-height: 0;
+  padding: 36px 0 20px;
 }
 
 .footer-grid section {
@@ -1131,7 +1131,7 @@ a:focus-visible {
 .footer-grid h3 {
   display: flex;
   align-items: center;
-  margin: 0 0 25px;
+  margin: 0 0 16px;
   font-size: 23px;
   font-weight: 500;
 }
@@ -1144,7 +1144,7 @@ a:focus-visible {
 }
 
 .footer-access p {
-  margin: 0 0 45px;
+  margin: 0 0 24px;
   font-size: 14px;
   line-height: 1.65;
 }
@@ -1169,7 +1169,9 @@ a:focus-visible {
 }
 
 .footer-hours table {
-  width: 100%;
+  width: calc(100% - 16px);
+  margin-right: auto;
+  margin-left: auto;
   border-collapse: collapse;
   font-size: 13px;
 }
@@ -1181,6 +1183,7 @@ a:focus-visible {
 .footer-hours th,
 .footer-hours td {
   padding: 4px 3px;
+  border-bottom: 1px solid var(--color-border-strong);
   font-weight: 400;
   text-align: center;
 }
@@ -1210,7 +1213,7 @@ a:focus-visible {
 .sitemap > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px 24px;
+  gap: 8px 24px;
 }
 
 .sitemap-mobile summary {
@@ -1265,6 +1268,7 @@ a:focus-visible {
   margin-right: 11px;
   color: var(--color-green-deep);
   font-size: 26px;
+  line-height: 1;
   vertical-align: -2px;
 }
 
@@ -1975,14 +1979,12 @@ a:focus-visible {
   }
 
   .news-list-desktop,
-  .hours-table-desktop,
   .desktop-staff,
   .sitemap-desktop {
     display: none !important;
   }
 
   .news-slider,
-  .hours-cards,
   .staff-cards {
     display: grid !important;
   }
