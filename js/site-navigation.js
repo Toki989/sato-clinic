@@ -196,15 +196,18 @@
 
   function createSearchToggle() {
     const toggle = document.createElement("button");
+    const icon = document.createElement("span");
 
     toggle.className = "header-search-toggle";
     toggle.type = "button";
     toggle.setAttribute("aria-label", "検索窓を開く");
     toggle.setAttribute("aria-expanded", "false");
-    toggle.append(
+    icon.className = "utility-icon";
+    icon.append(
       createIcon("icon-default", "./assets/icons/search.png"),
       createIcon("icon-hover", "./assets/satoclinic-asset/search-hover.png")
     );
+    toggle.append(icon);
     return toggle;
   }
 
