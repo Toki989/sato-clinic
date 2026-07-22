@@ -1,0 +1,348 @@
+/* Lower pages */
+
+.subpage-main {
+  --subpage-background: #fbfdfc;
+  --subpage-surface: var(--color-white);
+  --subpage-border: #c7ddd0;
+  --subpage-table-border: #bfd7c6;
+  --subpage-hero-background: #eaf5ef;
+
+  background: var(--subpage-background);
+}
+
+.subpage-main [id] {
+  scroll-margin-top: 96px;
+}
+
+.subpage-hero {
+  --subpage-hero-height: clamp(360px, 34vw, 720px);
+
+  position: relative;
+  min-height: var(--subpage-hero-height);
+  overflow: hidden;
+  background: var(--subpage-hero-background);
+}
+
+.subpage-hero img {
+  display: block;
+  width: 100%;
+  height: var(--subpage-hero-height);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.subpage-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.08));
+}
+
+.subpage-hero-copy {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: max(32px, calc((100% - var(--layout-container)) / 2));
+  width: min(650px, calc(100% - 64px));
+  color: var(--color-white);
+  transform: translateY(-50%);
+}
+
+.subpage-hero-copy p {
+  margin: 0 0 10px;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+}
+
+.subpage-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.subpage-section {
+  padding: 88px 0;
+}
+
+.subpage-section + .subpage-section {
+  padding-top: 0;
+}
+
+.subpage-heading {
+  margin: 0 0 28px;
+  color: var(--color-green-deep);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.subpage-lead {
+  max-width: 880px;
+  margin: 0 0 36px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.subpage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.subpage-card {
+  padding: 28px;
+  border: 1px solid var(--subpage-border);
+  border-radius: var(--radius-card);
+  background: var(--subpage-surface);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.subpage-card h2,
+.subpage-card h3 {
+  margin: 0 0 14px;
+  color: var(--color-green-deep);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.subpage-card p,
+.subpage-card li {
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.subpage-card p {
+  margin: 0;
+}
+
+.subpage-hours-table + .subpage-lead {
+  margin-top: 24px;
+  white-space: normal;
+}
+
+.subpage-card p + p {
+  margin-top: 14px;
+}
+
+.subpage-card ul {
+  margin: 0;
+  padding-left: 1.35em;
+}
+
+.subpage-card-wide {
+  grid-column: 1 / -1;
+}
+
+.notice-list {
+  display: grid;
+  gap: 18px;
+}
+
+.notice-item {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--subpage-border);
+  border-radius: var(--radius-card);
+  background: var(--subpage-surface);
+}
+
+.notice-item time {
+  color: #4b5d53;
+  font-size: 15px;
+}
+
+.notice-item h2 {
+  margin: 0 0 10px;
+  color: var(--color-green-deep);
+  font-size: 23px;
+  line-height: 1.45;
+}
+
+.notice-item p {
+  margin: 0;
+  line-height: 1.85;
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.service-card img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+}
+
+.policy-table,
+.subpage-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--subpage-surface);
+}
+
+.policy-table th,
+.policy-table td,
+.subpage-hours-table th,
+.subpage-hours-table td {
+  padding: 14px 16px;
+  border: 1px solid var(--subpage-table-border);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.policy-table th,
+.subpage-hours-table th {
+  background: var(--color-green-deep);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.subpage-hours-table td:not(:first-child),
+.subpage-hours-table th:not(:first-child) {
+  text-align: center;
+}
+
+.map-frame {
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: var(--radius-small);
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-group {
+  margin-bottom: 40px;
+}
+
+.faq-group h2 {
+  margin: 0 0 16px;
+  color: var(--color-green-deep);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.faq-item {
+  overflow: hidden;
+  border: 1px solid var(--subpage-border);
+  border-radius: var(--radius-card);
+  background: var(--subpage-surface);
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  cursor: pointer;
+  color: var(--color-green-deep);
+  font-size: 18px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--color-green);
+}
+
+.faq-item[open] summary::after {
+  content: "-";
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 24px 22px;
+  line-height: 1.85;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.page-nav a,
+.subpage-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid var(--color-green);
+  border-radius: 6px;
+  background: var(--color-white);
+  color: var(--color-green-deep);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible,
+.subpage-button:hover,
+.subpage-button:focus-visible {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .subpage-hero {
+    --subpage-hero-height: 280px;
+  }
+
+  .subpage-hero-copy {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .subpage-section {
+    padding: 56px 0;
+  }
+
+  .subpage-grid,
+  .notice-item,
+  .service-card {
+    grid-template-columns: 1fr;
+  }
+
+  .subpage-card,
+  .notice-item {
+    padding: 20px;
+  }
+
+  .service-card img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .policy-table,
+  .subpage-hours-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .map-frame {
+    min-height: 300px;
+  }
+
+  .subpage-main + .site-footer .sitemap-desktop {
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}

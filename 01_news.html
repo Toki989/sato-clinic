@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css?v=20260717-2">
+  <link rel="stylesheet" href="./css/style.css?v=20260722-refactor1">
+  <link rel="stylesheet" href="./css/subpages.css?v=20260722-refactor1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -20,7 +21,7 @@
       <nav class="utility-nav" aria-label="クイックメニュー">
         <a href="tel:0000000000" aria-label="電話 00-0000-0000"><span class="utility-icon"><img class="icon-default" src="./assets/icons/tel.png" alt="" aria-hidden="true"><img class="icon-hover" src="./assets/satoclinic-asset/tel-hover.png" alt="" aria-hidden="true"></span></a>
         <a href="04_hours-access.html#access" aria-label="アクセス"><span class="utility-icon"><img class="icon-default" src="./assets/icons/access.png" alt="" aria-hidden="true"><img class="icon-hover" src="./assets/satoclinic-asset/access-hover.png" alt="" aria-hidden="true"></span></a>
-        <a href="01_news.html" aria-label="お知らせ"><span class="utility-icon"><img class="icon-default" src="./assets/icons/search.png" alt="" aria-hidden="true"><img class="icon-hover" src="./assets/satoclinic-asset/search-hover.png" alt="" aria-hidden="true"></span></a>
+        <a href="01_news.html" aria-label="サイト内検索"><span class="utility-icon"><img class="icon-default" src="./assets/icons/search.png" alt="" aria-hidden="true"><img class="icon-hover" src="./assets/satoclinic-asset/search-hover.png" alt="" aria-hidden="true"></span></a>
         <a href="#site-map" class="menu-button" aria-label="サイトマップへ移動"><i aria-hidden="true"></i><span>メニュー</span></a>
       </nav>
     </div>
@@ -39,35 +40,35 @@
       <p class="subpage-lead">佐藤医院からのお知らせをご案内いたします。</p>
       <div class="notice-list">
         <article id="notice-flu" class="notice-item">
-          <time>2026/07/22</time>
+          <time datetime="2026-07-22">2026/07/22</time>
           <div>
             <h2>インフルエンザ予防接種について</h2>
             <p>今年もインフルエンザの予防接種を開始いたしました。予約制となっておりますので、お電話または受付にてご予約をお願いいたします。例年、予約が集中しやすいため、早めのご予約をおすすめいたします。</p>
           </div>
         </article>
         <article id="notice-yearend" class="notice-item">
-          <time>2026/07/22</time>
+          <time datetime="2026-07-22">2026/07/22</time>
           <div>
             <h2>年末年始の休診について</h2>
             <p>年末年始の休診日は、12月29日（金）〜1月4日（木）となります。年始は1月5日（金）より通常診療を再開いたします。皆様にはご不便をおかけしますが、何卒ご了承くださいますようお願いいたします。</p>
           </div>
         </article>
         <article id="notice-checkup" class="notice-item">
-          <time>2026/07/22</time>
+          <time datetime="2026-07-22">2026/07/22</time>
           <div>
             <h2>健康診断のご案内</h2>
             <p>今年も健康診断を実施しております。定期的な健康チェックは、病気の早期発見・予防にとても重要です。各種健康診断メニューをご用意しておりますので、ご希望の方はお電話にてお申し込みください。</p>
           </div>
         </article>
         <article id="notice-covid" class="notice-item">
-          <time>2026/07/22</time>
+          <time datetime="2026-07-22">2026/07/22</time>
           <div>
             <h2>新型コロナウイルス対策について</h2>
             <p>当院では引き続き、新型コロナウイルス感染症対策を徹底しております。ご来院の際には、マスクの着用、手指消毒にご協力をお願いいたします。また、発熱や風邪症状のある方は、事前にお電話でご相談いただけるとスムーズにご案内が可能です。</p>
           </div>
         </article>
         <article id="notice-online" class="notice-item">
-          <time>2026/07/22</time>
+          <time datetime="2026-07-22">2026/07/22</time>
           <div>
             <h2>オンライン診療の導入について</h2>
             <p>2024年より、オンライン診療を一部導入いたしました。通院が難しい方や、遠方にお住まいの方にご利用いただけます。ご希望の方は、当院スタッフまでお問い合わせください。</p>
@@ -103,7 +104,8 @@
     </div>
     <p class="copyright">© 2026 Sato Clinic</p>
   </footer>
+  <script src="./js/site-navigation.js?v=20260722-refactor1"></script>
   <script src="./js/clinic-hours-data.js"></script>
-  <script src="./js/clinic-hours.js"></script>
+  <script src="./js/clinic-hours.js?v=20260722-refactor1"></script>
 </body>
 </html>

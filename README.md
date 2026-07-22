@@ -18,9 +18,11 @@
 ## ファイル構成
 
 ```text
-css/style.css              共通スタイルとレスポンシブ対応
+css/style.css              TOPを含む共通スタイルとレスポンシブ対応
+css/subpages.css           下層ページ専用スタイル
 js/clinic-hours-data.js    診療時間の唯一のデータソース
-js/clinic-hours.js         診療時間表・本日の診療時間・メニューの描画
+js/site-navigation.js      検索UI・ヘッダーメニューの描画
+js/clinic-hours.js         診療時間表・本日の診療時間・スクロール演出
 assets/                    画像・アイコン
 ```
 

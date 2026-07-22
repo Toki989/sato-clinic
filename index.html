@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&family=Sawarabi+Mincho&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css?v=20260717-2">
+  <link rel="stylesheet" href="./css/style.css?v=20260722-refactor1">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
             <img class="icon-hover" src="./assets/satoclinic-asset/access-hover.png" alt="" aria-hidden="true">
           </span>
         </a>
-        <a href="01_news.html" aria-label="お知らせ">
+        <a href="01_news.html" aria-label="サイト内検索">
           <span class="utility-icon">
             <img class="icon-default" src="./assets/icons/search.png" alt="" aria-hidden="true">
             <img class="icon-hover" src="./assets/satoclinic-asset/search-hover.png" alt="" aria-hidden="true">
@@ -118,7 +118,7 @@
     </section>
 
     <section id="services" class="departments container" aria-labelledby="services-heading">
-      <h2 id="services-heading" class="section-label"><a href="02_services.html">診療内容</a></h2>
+      <h2 id="services-heading" class="section-label">診療内容</h2>
       <a class="department-card" href="02_services.html#general-medicine" aria-label="一般内科の診療ページへ"><img
           src="./assets/icons/general.png" alt="" aria-hidden="true">
         <h3>一般内科</h3>
@@ -135,7 +135,7 @@
           src="./assets/icons/lungs.png" alt="" aria-hidden="true">
         <h3>呼吸器内科</h3>
       </a>
-      <a class="more-link" href="02_services.html"><span class="more-link-text">診療内容を詳しく見る</span><span>›</span></a>
+      <a class="more-link" href="02_services.html"><span class="more-link-text">詳しく</span><span aria-hidden="true">＞</span></a>
     </section>
 
     <section class="photo-row" aria-label="医院イメージ">
@@ -145,7 +145,7 @@
     </section>
 
     <section id="hours" class="hours-section container small-container">
-      <h2><a href="04_hours-access.html#hours">診療時間</a></h2>
+      <h2>診療時間</h2>
       <table class="hours-table-desktop" aria-describedby="hours-note">
         <caption class="visually-hidden">佐藤医院の診療時間一覧</caption>
         <thead id="hours-table-head"></thead>
@@ -154,6 +154,7 @@
       <div id="hours-cards-mobile" class="hours-cards mobile-only" aria-label="スマートフォン向け診療時間"></div>
       <p id="hours-note">受付時間: 午前 8:00〜11:00 / 午後 12:00〜17:00<br>休診日:
         木曜日・土曜午後・日曜日<br>※祝祭日も診療を行っておりますが、休診日もございますので、事前にご確認ください。</p>
+      <a class="section-more-link" href="04_hours-access.html#hours"><span class="more-link-text">詳しく</span><span aria-hidden="true">＞</span></a>
     </section>
 
     <section class="feature-image">
@@ -162,10 +163,11 @@
 
     <section id="about" class="about-section container">
       <div class="about-copy">
-        <h2><a href="03_about.html">当院について</a></h2>
+        <h2>当院について</h2>
         <p>佐藤医院は、地域の皆様の健康を守り、より良い生活をサポートすることを使命としています。</p>
         <p>創立以来、私たちは「患者様一人ひとりに寄り添った診療」を大切にし、地域密着型の医療を提供してまいりました。</p>
         <p>今後も、皆様の健康維持と病気予防に貢献するため、より良い医療サービスを提供し続けることをお約束いたします。</p>
+        <a class="section-more-link" href="03_about.html"><span class="more-link-text">詳しく</span><span aria-hidden="true">＞</span></a>
       </div>
       <img src="./assets/Hospital_Exterior/hospital_6.jpg" alt="佐藤医院の院内" loading="lazy">
     </section>
@@ -174,7 +176,7 @@
       <div class="container greeting-inner">
         <img src="./assets/Doctor_Image/sato_taro.jpg" alt="佐藤医院 院長 佐藤太郎" loading="lazy">
         <div>
-          <h2><a href="03_about.html#greeting">ご挨拶</a></h2>
+          <h2><a href="03_about.html#greeting">院長挨拶</a></h2>
           <p>こんにちは。<br>佐藤医院の院長、佐藤太郎と申します。当院のホームページをご覧いただき、ありがとうございます。</p>
           <p>
             佐藤医院では、「地域に根ざした医療」をモットーに、患者様一人ひとりに寄り添った医療を提供することを目指しております。日常的な健康管理から生活習慣病の予防、さらには専門的な診断や治療まで、幅広い内科診療を行い、地域の皆様の健康を支える役割を担っていきたいと考えております。
@@ -270,7 +272,7 @@
     </section>
 
     <section id="access" class="access-section container">
-      <h2><a href="04_hours-access.html#access">アクセス</a></h2>
+      <h2>アクセス</h2>
       <div class="access-grid">
         <img src="./assets/map.jpg" alt="佐藤医院周辺地図" loading="lazy">
         <div>
@@ -280,6 +282,7 @@
           <p class="access-note">ご来院の際は、交通状況にご注意ください。<br>最寄駅から徒歩5分の便利な立地です。</p>
         </div>
       </div>
+      <a class="section-more-link" href="04_hours-access.html#access"><span class="more-link-text">詳しく</span><span aria-hidden="true">＞</span></a>
     </section>
   </main>
 
@@ -339,8 +342,9 @@
     </div>
     <p class="copyright">© 2026 Sato Clinic</p>
   </footer>
+  <script src="./js/site-navigation.js?v=20260722-refactor1"></script>
   <script src="./js/clinic-hours-data.js"></script>
-  <script src="./js/clinic-hours.js"></script>
+  <script src="./js/clinic-hours.js?v=20260722-refactor1"></script>
 </body>
 
 </html>
