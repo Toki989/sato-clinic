@@ -6,7 +6,7 @@ const receptionHours = Object.freeze({
 
 const clinicHours = Object.freeze({
   closedDays: "木曜日・土曜午後・日曜日",
-  holidayNote: "祝祭日は休診となる場合があります。事前にご確認ください。",
+  holidayNote: "祝祭日も診療を行っておりますが、休診日もございますので、事前にご確認ください。",
   symbols: Object.freeze({
     open: "○",
     closed: "−"
@@ -42,7 +42,7 @@ const clinicHours = Object.freeze({
       slotIndexes: Object.freeze([]),
       receptionHours: "",
       note: "木曜日・日曜日",
-      subnote: "祝祭日は休診となる場合があります。事前にご確認ください。"
+      subnote: "祝祭日も診療を行っておりますが、休診日もございますので、事前にご確認ください。"
     })
   ])
 });
