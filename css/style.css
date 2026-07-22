@@ -360,6 +360,12 @@ a:focus-visible {
   gap: 4px;
 }
 
+@media (min-width: 769px) {
+  .menu-button {
+    transform: translateX(3px);
+  }
+}
+
 .utility-icon {
   position: relative;
   display: block;
