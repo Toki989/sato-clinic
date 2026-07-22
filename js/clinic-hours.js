@@ -178,14 +178,14 @@ function setupHeaderMenu() {
   if (!header || !button || !headerInner || header.querySelector(".header-menu-panel")) return;
 
   const menuItems = [
-    { href: "00_index.html", label: "\u30db\u30fc\u30e0" },
+    { href: "index.html", label: "\u30db\u30fc\u30e0" },
     { href: "01_news.html", label: "\u304a\u77e5\u3089\u305b" },
     { href: "02_services.html", label: "\u8a3a\u7642\u5185\u5bb9" },
     { href: "03_about.html", label: "\u5f53\u9662\u306b\u3064\u3044\u3066" },
     { href: "04_hours-access.html", label: "\u8a3a\u7642\u6642\u9593\u30fb\u30a2\u30af\u30bb\u30b9" },
     { href: "05_faq.html", label: "\u3088\u304f\u3042\u308b\u8cea\u554f" }
   ];
-  const currentPage = window.location.pathname.split("/").pop() || "00_index.html";
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const panel = document.createElement("div");
   const linkList = document.createElement("div");
   const menuText = button.querySelector("span");
